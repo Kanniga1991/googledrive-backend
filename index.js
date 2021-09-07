@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 const app = express();
 const data = [];
+const PORT = process.env.PORT || 3500;
 
 app.use(
 	cors({
@@ -99,6 +100,6 @@ app.put("/forgot", (req, res) => {
 // 	});
 // });
 
-app.listen(3500, () => {
-	console.log("The Server is listening in port : 3500");
+app.listen(PORT, () => {
+	console.log(`The Server is listening in port : ${PORT}`);
 });
